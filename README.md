@@ -204,17 +204,15 @@ Se implementa un *servidor de juego multijugador** basado en Node.js + Socket.io
 Kubernetes (K8s) es una plataforma **open-source** diseñada por Google para automatizar la administración de aplicaciones basadas en contenedores.
 Su objetivo principal es proporcionar un sistema robusto, escalable y auto-reparable.
 
----
-
 ##  1.1 Contenedores vs Máquinas Virtuales
 
-### **Máquinas Virtuales (VMs):**
+##*Máquinas Virtuales (VMs):**
 
 * Requieren un sistema operativo completo.
 * Alto consumo de recursos.
 * Lentas para iniciar.
 
-### **Contenedores (Docker, containerd):**
+##*Contenedores (Docker, containerd):**
 
 * Comparten el kernel del host.
 * Livianos y rápidos.
@@ -227,16 +225,16 @@ Kubernetes opera sobre contenedores porque son *inmutables**, *escalables** y *p
 
 ##  1.2 Componentes internos de Kubernetes
 
-### **Master Node (Control Plane)**
+###*Master Node (Control Plane)**
 
 Encargado de la lógica del clúster:
 
-* **API Server**: puerta de entrada al cluster (kubectl se comunica aquí).
-* **Scheduler**: decide en qué nodo correr cada pod.
-* **Etcd**: base de datos distribuida clave-valor, guarda el estado del cluster.
-* **Controller Manager**: mantiene el estado deseado (réplicas, autoreparación).
+* *API Server**: puerta de entrada al cluster (kubectl se comunica aquí).
+* *Scheduler**: decide en qué nodo correr cada pod.
+* *Etcd**: base de datos distribuida clave-valor, guarda el estado del cluster.
+* *Controller Manager**: mantiene el estado deseado (réplicas, autoreparación).
 
-### **Worker Nodes**
+###*Worker Nodes**
 
 Ejecutan los contenedores:
 
@@ -291,7 +289,7 @@ Docker es un motor de contenedores que permite empaquetar aplicaciones junto a s
 
 ##  2.3 Crear el servidor del juego
 
-### Archivo: `server.js`
+###Archivo: `server.js`
 
 ```js
 // server.js
@@ -331,11 +329,9 @@ server.listen(3000, () => {
 });
 ```
 
----
-
 ##  2.4 Crear la imagen Docker
 
-### Archivo: `Dockerfile`
+###Archivo: `Dockerfile`
 
 ```Dockerfile
 FROM node:18-alpine
@@ -351,14 +347,11 @@ Construcción:
 ```bash
 docker build -t juego-multijugador:v1 .
 ```
-
----
-
 ---
 
 #  ÍTEM 3 — Despliegue en Kubernetes
 
-##  Deployment: controla las réplicas del juego
+##Deployment: controla las réplicas del juego
 
 Archivo: **`juego-deployment.yaml`**
 
@@ -393,7 +386,7 @@ kubectl get pods
 
 ---
 
-##  Service: expone y balancea usuarios
+#Service: expone y balancea usuarios
 
 Archivo: **`juego-service.yaml`**
 
@@ -421,13 +414,11 @@ kubectl get svc
 
 ---
 
-##  Obtener URL desde Minikube
+#Obtener URL desde Minikube
 
 ```bash
 minikube service juego-service --url
 ```
-
----
 
 ---
 
@@ -445,7 +436,6 @@ Cualquier operación que modifica el estado global del juego:
 players[socket.id] = data;
 ```
 
----
 
 ##  4.2 Mutex (evita que dos jugadores modifiquen simultáneamente)
 
@@ -468,7 +458,6 @@ socket.on("move", async (data) => {
 });
 ```
 
----
 
 ##  4.3 Semáforo (limitar número de jugadores)
 
@@ -490,7 +479,6 @@ socket.on("disconnect", () => {
 });
 ```
 
----
 
 ##  4.4 Hilos (Worker Threads)
 
