@@ -13,7 +13,7 @@ Este taller reúne tres ejercicios clave del tercer corte, cada uno enfocado en 
 Simulación y control manual de robots humanoides (NAO, Pepper, Romeo y Dancer) usando **Gym**, **PyBullet** y **QiBullet**  
 ---
 
-## 📌 Descripción del Proyecto
+##  Descripción del Proyecto
 
 Este repositorio contiene el desarrollo completo de un entorno de simulación basado en **humanoid-gym**, permitiendo controlar manualmente robots humanoides mediante sliders en PyBullet.  
 Se implementaron ambientes funcionales para los robots:
@@ -31,7 +31,7 @@ El sistema permite:
 - Cargar robots con sus URDF y recursos originales de QiBullet  
 
 ---
-## 🏗️ Tecnologías y librerías usadas
+##  Tecnologías y librerías usadas
 
 | Tecnología | Uso |
 |-----------|-----|
@@ -45,7 +45,7 @@ El sistema permite:
 
 ---
 
-## 📦 Instalación
+##  Instalación
 
 ### 1. Crear entorno virtual
 ```bash
@@ -74,7 +74,7 @@ Continue the installation (y/n)? y
 
 ---
 
-## 🦾 Robots implementados
+##  Robots implementados
 
 Se desarrollaron y probaron entornos para:
 
@@ -94,7 +94,7 @@ Todos soportan:
 
 ---
 
-## 🎮 Ejecución de cada robot
+## Ejecución para cada robot
 
 ### NAO
 ```python
@@ -125,7 +125,7 @@ env.reset()
 
 ---
 
-## 🕹️ Control manual con sliders
+##  Control manual con sliders
 
 Código unificado para cualquier robot:
 
@@ -148,7 +148,7 @@ while True:
 
 ---
 
-## 🐳 Docker
+##  Docker
 
 ### Construir imagen
 ```bash
@@ -168,7 +168,7 @@ docker pull <tu_usuario>/humanoid-gym
 
 ---
 
-## 📁 Estructura del repositorio
+##  Estructura del repositorio
 
 ```
 humanoid-gym/
@@ -191,7 +191,10 @@ humanoid-gym/
 ├── requirements.txt
 └── README.md
 ```
-
 ---
-
+##  Evidencia fotografica
+![Pepper](pepper.png) 
+![nao](nao.png) 
+![romeo](romeo.png) 
+![dancer](dancer.png) 
 
