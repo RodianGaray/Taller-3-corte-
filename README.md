@@ -83,7 +83,7 @@ Se desarrollaron y probaron entornos para:
 | NAO | `nao-v0` | ✔️ Funcional |
 | Pepper | `pepper-v0` | ✔️ Funcional |
 | Romeo | `romeo-v0` | ✔️ Funcional |
-| Dancer | `dancer-v0` | ✔️ Añadido al proyecto |
+| Dancer | `dancer-v0` | ✔️  Funcional |
 
 Todos soportan:
 - `reset()`
@@ -158,12 +158,6 @@ docker build -t humanoid-gym .
 ### Ejecutar contenedor
 ```bash
 docker run -it humanoid-gym
-```
-
-La imagen también está disponible en DockerHub:
-
-```
-docker pull <tu_usuario>/humanoid-gym
 ```
 
 ---
