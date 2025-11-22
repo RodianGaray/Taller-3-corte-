@@ -79,10 +79,10 @@ Se desarrollaron y probaron entornos para:
 
 | Robot | Gym ID | Estado |
 |--------|--------|---------|
-| NAO | `nao-v0` | ✔️ Funcional |
-| Pepper | `pepper-v0` | ✔️ Funcional |
-| Romeo | `romeo-v0` | ✔️ Funcional |
-| Dancer | `dancer-v0` | ✔️  Funcional |
+| NAO | `nao-v0` | Funcional |
+| Pepper | `pepper-v0` |  Funcional |
+| Romeo | `romeo-v0` | Funcional |
+| Dancer | `dancer-v0` |   Funcional |
 
 Todos soportan:
 - `reset()`
@@ -95,7 +95,7 @@ Todos soportan:
 
 ## Ejecución para cada robot
 
-### NAO
+### Nao
 ```python
 import gym, humanoid_gym
 env = gym.make('nao-v0')
@@ -195,28 +195,18 @@ humanoid-gym/
 # 2. Algoritmo de Segmentos  
 
 ---
-# 3.3. Kubernetes
-Se implementa un **servidor de juego multijugador** basado en Node.js + Socket.io, el cual se ejecuta en **contenedores Docker** y se despliega en un **cluster Kubernetes** con múltiples réplicas balanceadas automáticamente.
-
-El objetivo es comprender:
-✔ qué es Kubernetes
-✔ cómo se relaciona con los contenedores
-✔ cómo crear imágenes Docker
-✔ cómo desplegar aplicaciones distribuidas
-✔ cómo manejar concurrencia (mutex, semáforos, sección crítica)
-✔ cómo mejorar interfaces y comunicación en tiempo real
-
+# 3. Kubernetes
+Se implementa un *servidor de juego multijugador** basado en Node.js + Socket.io, el cual se ejecuta en *contenedores Docker** y se despliega en un *cluster Kubernetes** con múltiples réplicas balanceadas automáticamente.
 
 ---
-
-# 📌 1 — ¿Qué es Kubernetes? 
+#  1 — ¿Qué es Kubernetes? 
 
 Kubernetes (K8s) es una plataforma **open-source** diseñada por Google para automatizar la administración de aplicaciones basadas en contenedores.
 Su objetivo principal es proporcionar un sistema robusto, escalable y auto-reparable.
 
 ---
 
-## 🔷 1.1 Contenedores vs Máquinas Virtuales
+##  1.1 Contenedores vs Máquinas Virtuales
 
 ### **Máquinas Virtuales (VMs):**
 
@@ -531,12 +521,12 @@ worker.on("message", (msg) => {
 
 #  Referencias Bibliográficas
 
-✔ Kubernetes Documentation — [https://kubernetes.io/docs](https://kubernetes.io/docs)
-✔ Docker Documentation — [https://docs.docker.com](https://docs.docker.com)
-✔ Socket.io Docs — [https://socket.io/docs](https://socket.io/docs)
-✔ Node.js Worker Threads — [https://nodejs.org/api/worker_threads.html](https://nodejs.org/api/worker_threads.html)
-✔ Tanenbaum, A. *Modern Operating Systems* (2019)
-✔ Brendan Burns. *Designing Distributed Systems* (Microsoft Press, 2018)
+1. Kubernetes Documentation — [https://kubernetes.io/docs](https://kubernetes.io/docs)
+2. Docker Documentation — [https://docs.docker.com](https://docs.docker.com)
+3. Socket.io Docs — [https://socket.io/docs](https://socket.io/docs)
+4. Node.js Worker Threads — [https://nodejs.org/api/worker_threads.html](https://nodejs.org/api/worker_threads.html)
+5. Tanenbaum, A. *Modern Operating Systems* (2019)
+6. Brendan Burns. *Designing Distributed Systems* (Microsoft Press, 2018)
 
 ---
 
