@@ -14,8 +14,7 @@ Simulación y control manual de robots humanoides (NAO, Pepper, Romeo y Dancer) 
 ---
 
 ##  Descripción del Proyecto
-
-Este repositorio contiene el desarrollo completo de un entorno de simulación basado en **humanoid-gym**, permitiendo controlar manualmente robots humanoides mediante sliders en PyBullet.  
+desarrollo completo de un entorno de simulación basado en **humanoid-gym**, permitiendo controlar manualmente robots humanoides mediante sliders en PyBullet.  
 Se implementaron ambientes funcionales para los robots:
 
 - **NAO**
@@ -191,4 +190,12 @@ humanoid-gym/
 ![nao](nao.png) 
 ![romeo](romeo.png) 
 ![dancer](dancer.png) 
+
+---
+# 2. Algoritmo de Segmentos  
+
+---
+# 3.3. Kubernetes
+
+docker build -t juego-multijugador:v1 .
 
